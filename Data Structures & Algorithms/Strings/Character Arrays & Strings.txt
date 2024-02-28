@@ -1,0 +1,3 @@
+What are Character Arrays and Strings?
+
+Strings in computer science are sequences of symbols from an alphabet, used to store human-readable text like words and sentences. They are fundamental for communication in computer programs. A string over an alphabet Σ is a finite sequence of symbols from Σ, with the length denoted as |s|. The empty string, ε, has a length of 0. Strings can be concatenated, creating a new string by combining two existing strings. In programming languages, strings are often represented within quotation marks and have a maximum length constraint. While commonly used for text, strings can also represent any homogeneously typed data in computer science.

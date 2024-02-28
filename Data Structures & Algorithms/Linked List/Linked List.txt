@@ -1,0 +1,3 @@
+What are Linked Lists?
+
+Linked Lists are linear data structures used to store collections of elements. Unlike arrays, linked lists store elements in nodes that are not necessarily stored in contiguous memory locations. Each node in a linked list contains data and a reference to the next node. This structure allows for dynamic growth and efficient insertion and deletion operations without the need to specify the size beforehand. Linked lists are versatile and commonly used in various applications like web browsers, music players, and more. They are essential for tasks requiring dynamic memory allocation and efficient manipulation of data structures. Linked lists offer flexibility and efficient memory usage compared to arrays.
