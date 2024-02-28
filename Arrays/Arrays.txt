@@ -1,0 +1,3 @@
+What is Array?
+
+An array is a collection of items of same data type stored at contiguous memory locations.Arrays are fundamental data structures in programming, allowing storage of multiple elements of the same type under a single variable name. They provide a way to efficiently manage and access collections of data. Arrays have a fixed size determined at the time of creation, making them suitable for storing and manipulating large sets of data. Elements in an array are accessed using an index, starting from 0. This index-based access enables quick retrieval and modification of specific elements within the array. Arrays are versatile and widely used in various programming languages for tasks like sorting, searching, and storing data efficiently.
