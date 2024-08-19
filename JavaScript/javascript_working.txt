@@ -1,0 +1,25 @@
+1. Global Execution Context
+this keyword: In Node.js, this is an empty object initially. In browsers, it refers to the window object.
+Execution: Starts by setting up global scope, initializing variables to undefined, and storing function definitions.
+
+2. Memory Phase (Creation Phase)
+Purpose: JS engine scans code, sets up memory space for variables and functions.
+Variables: Initially assigned undefined.
+Functions: Stored with their full definitions.
+
+3. Execution Phase
+Variables: Assigned actual values during execution.
+Functions: Executed as they are encountered.
+Function Execution Context
+Activation: Created each time a function is called.
+Phases:
+Memory Phase: Setup for variables and functions.
+Execution Phase: Actual assignments and function executions.
+Return Value: Passed back to the Global Execution Context after function completes.
+Summary
+JavaScript operates in phases:
+
+Global Execution Context: Initializes this, sets up global scope.
+Memory Phase: Prepares memory for variables (undefined) and functions (full definitions).
+Execution Phase: Assigns real values to variables, executes code, and handles function calls.
+Understanding these phases helps in grasping how JavaScript manages variables, functions, and execution flow throughout the code.
