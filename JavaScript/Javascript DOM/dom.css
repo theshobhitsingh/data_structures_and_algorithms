@@ -1,0 +1,42 @@
+body {
+     background-color: #212121;
+     color: paleturquoise;
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+   }
+   
+   h1 {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+   }
+   
+   p {
+     font-weight: bold;
+     font-size: 1.2rem;
+   }
+   
+   ul {
+     padding: 0;
+     margin: 1rem 0;
+   }
+   
+   ul li {
+     background-color: #ffc0cb;
+     color: navy;
+     padding: 0.5rem;
+     margin-bottom: 0.5rem;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+   
+   ul li:hover {
+     background-color: #ffa07a;
+   }
+   

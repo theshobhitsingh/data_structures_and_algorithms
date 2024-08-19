@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Intervals</title>
+     <style>
+          body {
+               background-color: #414141;
+               color: white;
+               font-family: Arial, sans-serif;
+               text-align: center;
+          }
+          #messages {
+               margin-top: 20px;
+               border: 1px solid #fff;
+               padding: 10px;
+               max-height: 200px;
+               overflow-y: auto;
+          }
+     </style>
+</head>
+
+<body>
+     <h1>Javascript</h1>
+     <button id="start">Start💨</button>
+     <button id="stop">Stop⭕</button>
+     <div id="messages"></div>
+
+     <script>
+          const messagesDiv = document.getElementById('messages');
+          let intervalId;
+
+          const sayDate = function (str) {
+               const message = document.createElement('div');
+               message.textContent = `${str} - ${new Date().toLocaleTimeString()}`;
+               messagesDiv.appendChild(message);
+          }
+
+          const start = document.getElementById('start');
+          const stop = document.getElementById('stop');
+
+          start.addEventListener('click', function() {
+               // Clear any existing interval before starting a new one
+               clearInterval(intervalId);
+               intervalId = setInterval(function() {
+                    sayDate("hi");
+               }, 1000);
+          });
+
+          stop.addEventListener('click', function() {
+               clearInterval(intervalId);
+          });
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Javascript Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue; display:flex">
+     <h2>Amazing images</h2>
+     <div>
+          <ul id="images">
+               <li><img width="200px" id="photoshop"
+                         src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                         alt="photoshop"></li>
+               <li><img width="200px" id="japan"
+                         src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                         alt=""></li>
+               <li><img width="200px" id="river"
+                         src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                         alt=""></li>
+               <li><img width="200px" id="owl"
+                         src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                         alt=""></li>
+               <li><img width="200px" id="prayer"
+                         src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                         alt=""></li>
+               <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+          </ul>
+     </div>
+     <script>
+          // document.getElementById('owl').onclick = function () { alert("Owl Clicked!"); }
+          // document.getElementById('owl').addEventListener('click', () => { alert('🦉') }, false)
+
+          //attachEvent() - Early Dayz
+          //jQuery - on  - Old Days
+
+          /*type, timestamp, defaultPreventedtarget, toElement, srcElement, currentTarget,
+          clientX, clientY, screenX, screenY, altkey, ctrlkey, shiftkey, keyCode*/
+
+          /*document.getElementById('images').addEventListener('click', function (e) {
+               console.log("clicked inside the ul");
+          }, false)
+
+          document.getElementById('owl').addEventListener('click', function (e) {
+               console.log("owl clicked");
+               e.stopPropagation()
+          }, false)
+
+
+          document.getElementById('google').addEventListener('click', function (e) {
+               e.preventDefault();
+               e.stopPropagation()
+               console.log("google clicked");
+          }, false)
+*/
+
+          document.querySelector('#images').addEventListener('click', function (e) {
+               console.log(e.target.tagName);
+               if (e.target.tagName === 'IMG') {
+                    console.log(e.target.id);
+                    let removeIt = e.target.parentNode
+                    removeIt.remove()
+               }
+
+
+          })
+
+          removeIt.parentNode.removeChild(removeIt)
+
+          // Event bubbling is a concept in JavaScript that describes how events propagate (or bubble up)
+          // through the DOM (Document Object Model) hierarchy.
+          // When an event occurs on an element, it first runs the handlers on it,
+          // then on its parent, then all the way up on other ancestors.
+
+          /*
+          The event.stopPropagation() method is used to stop this event bubbling.
+           When called, it prevents the event from bubbling up to parent elements, 
+           so that any parent event handlers will not be triggered.
+          */
+     </script>
+</body>
+
+</html>

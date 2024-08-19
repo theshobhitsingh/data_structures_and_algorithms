@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Example</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text color */
+            font-family: Arial, sans-serif; /* Modern font */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full height */
+            margin: 0; /* Remove default margin */
+        }
+
+        button {
+            background-color: #6200ea; /* Primary color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px 30px; /* Padding */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+        }
+
+        button:hover {
+            background-color: #3700b3; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge */
+        }
+
+        button:focus {
+            outline: none; /* Remove focus outline */
+        }
+    </style>
+</head>
+<body>
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        class ReactApp {
+            constructor() {
+                this.library = "React";
+                this.server = "https://localhost:3000";
+
+                // Adding event listener to the button
+                document
+                    .querySelector('#clickButton')
+                    .addEventListener('click', this.handleClick.bind(this));
+            }
+
+            // Method to handle button click
+            handleClick() {
+                console.log("Button clicked");
+                console.log(this.server);
+            }
+        }
+
+        // Create an instance of the ReactApp
+        const app = new ReactApp();
+    </script>
+</body>
+</html>
