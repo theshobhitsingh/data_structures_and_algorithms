@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>GitHub Info Card - Large, Dark Mode</title>
+     <style>
+          /* Base styles */
+          body {
+               background-color: #121212;
+               color: #ffffff;
+               font-family: Arial, sans-serif;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               margin: 0;
+          }
+
+          /* Styling for the glassmorphic card */
+          .glassmorphic-card {
+               width: 400px;
+               padding: 30px;
+               background: rgba(255, 255, 255, 0.15);
+               backdrop-filter: blur(10px);
+               border-radius: 20px;
+               box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+               backdrop-filter: blur(20px);
+               -webkit-backdrop-filter: blur(20px);
+               border: 1px solid rgba(255, 255, 255, 0.18);
+               transition: transform 0.3s ease-in-out;
+          }
+
+          .glassmorphic-card:hover {
+               transform: scale(1.02);
+          }
+
+          .glassmorphic-card header {
+               display: flex;
+               align-items: center;
+               margin-bottom: 30px;
+          }
+
+          .glassmorphic-card header img {
+               width: 80px;
+               height: 80px;
+               border-radius: 50%;
+               margin-right: 20px;
+               border: 2px solid rgba(255, 255, 255, 0.5);
+          }
+
+          .glassmorphic-card header h2 {
+               margin: 0;
+               font-size: 2rem;
+          }
+
+          .glassmorphic-card .info {
+               margin-bottom: 20px;
+          }
+
+          .glassmorphic-card .info p {
+               margin: 10px 0;
+               font-size: 1rem;
+          }
+
+          /* Dark mode specific styles */
+          .dark-mode {
+               background-color: #121212;
+               color: #ffffff;
+          }
+
+          .dark-mode .glassmorphic-card {
+               background: rgba(0, 0, 0, 0.15);
+               border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .dark-mode .glassmorphic-card header img {
+               border-color: rgba(255, 255, 255, 0.5);
+          }
+     </style>
+</head>
+
+<body>
+     <div class="glassmorphic-card">
+          <header>
+               <img src="" alt="GitHub Avatar">
+               <h2>GitHub User</h2>
+          </header>
+          <div class="info">
+               <p><strong>Followers:</strong> <span id="followers"></span></p>
+               <p><strong>Following:</strong> <span id="following"></span></p>
+               <p><strong>Public Repos:</strong> <span id="public_repos"></span></p>
+               <p><strong>Location:</strong> <span id="location"></span></p>
+          </div>
+     </div>
+
+     <script>
+          // Learning XML way to do http requests -> Old Dayz
+          const reqURL = 'https://api.github.com/users/theshobhitsingh';
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', reqURL);
+          xhr.onreadystatechange = function () {
+               if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    console.log(data); // Log the entire data object
+                    // Update DOM elements with fetched data
+                    document.querySelector('img').src = data.avatar_url;
+                    document.querySelector('h2').textContent = data.login;
+                    document.querySelector('#followers').textContent = data.followers;
+                    document.querySelector('#following').textContent = data.following;
+                    document.querySelector('#public_repos').textContent = data.public_repos;
+                    document.querySelector('#location').textContent = data.location;
+               }
+          }
+          xhr.send();
+     </script>
+</body>
+
+</html>

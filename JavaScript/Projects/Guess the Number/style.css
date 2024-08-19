@@ -1,0 +1,89 @@
+html {
+  font-family:cursive;
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #212121, #1a1a1a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper {
+  box-sizing: border-box;
+  text-align: center;
+  width: 450px;
+  height: 550px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 25px;
+  padding: 20px;
+}
+
+h1 {
+  background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input[type="text"] {
+  color: #000;
+  width: 250px;
+  height: 50px;
+  font-size: 30px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: rgba(22, 22, 22, 0.8);
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(22, 22, 22, 1);
+}
+
+.resultParas p {
+  color: #fff;
+}
+
+.lastResult {
+  color: #fff;
+  padding: 7px;
+}
+
+.guesses {
+  color: #fff;
+  padding: 7px;
+  background: rgba(122, 122, 122, 0.5);
+  border-radius: 5px;
+}
