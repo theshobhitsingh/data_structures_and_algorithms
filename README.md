@@ -4,12 +4,12 @@ Welcome to my first GitHub repository! This repository is dedicated to my learni
 
 ## About the Repository
 
-This repository is a personal project where I am systematically learning and implementing different data structures and algorithms. It serves as a collection of my notes, code implementations, and problem-solving techniques related to DSA. 
+This repository is a personal project where I systematically learn and implement different data structures and algorithms. It serves as a collection of my notes, code implementations, and problem-solving techniques related to DSA. 
 
 ### Repository Content
 
 - **Data Structures**: Implementations and explanations of various data structures such as arrays, linked lists, stacks, queues, trees, graphs, and hash tables.
-- **Algorithms**: Solutions and explanations for different algorithms including sorting, searching, dynamic programming, greedy algorithms, and graph algorithms.
+- **Algorithms**: Solutions and explanations for different algorithms, including sorting, searching, dynamic programming, greedy algorithms, and graph algorithms.
 - **Practice Problems**: A collection of problems and challenges from platforms like LeetCode, HackerRank, and CodeSignal to practice and enhance problem-solving skills.
 
 ## Objectives
@@ -17,7 +17,7 @@ This repository is a personal project where I am systematically learning and imp
 The primary objectives of this repository are:
 
 1. **Learning and Understanding**: To deepen my understanding of data structures and algorithms through practical implementation and problem-solving.
-2. **Sharing Knowledge**: To share the knowledge I gain with others who are learning DSA, providing clear explanations and well-documented code.
+2. **Sharing Knowledge**: To share the knowledge I gain with others learning DSA, providing clear explanations and well-documented code.
 3. **Building a Portfolio**: To create a portfolio of my work in DSA that can be showcased to potential employers or collaborators.
 
 ## Author
@@ -29,7 +29,7 @@ The primary objectives of this repository are:
 
 The repository is organized as follows:
 
-- **/data_structures**: Contains implementations and explanations of various data structures.
+- **/data_structures**: This contains implementations and explanations of various data structures.
 - **/algorithms**: Contains implementations and explanations of various algorithms.
 - **/practice_problems**: Contains solutions to practice problems with explanations.
 - **/docs**: Documentation files, including notes and guides related to data structures and algorithms.
